@@ -22,6 +22,7 @@ export default {
     'element-ui/lib/theme-chalk/index.css',
     '@/assets/reset.css',
     '@/assets/common.scss',
+    'animate.css/animate.min.css',
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins

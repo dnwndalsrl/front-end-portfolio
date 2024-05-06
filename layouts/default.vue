@@ -10,10 +10,4 @@ export default {
 }
 </script>
 
-<style lang="scss">
-div.main-container {
-  p {
-    color: red;
-  }
-}
-</style>
+<style lang="scss"></style>
