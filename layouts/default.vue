@@ -6,12 +6,26 @@
         <img src="/icons/menu.png" alt="menu" />
       </div>
     </div>
+    <div id="cursor-dot"></div>
   </div>
 </template>
 
 <script>
+import { gsap } from 'gsap'
+
 export default {
   name: 'BasicLayout',
+  mounted() {
+    const cursor = document.getElementById('cursor-dot')
+    document.addEventListener('mousemove', (e) => {
+      gsap.to(cursor, {
+        x: e.clientX,
+        y: e.clientY,
+        duration: 0.2,
+        ease: 'Power1.easeOut',
+      })
+    })
+  },
 }
 </script>
 
@@ -56,6 +70,18 @@ div.layout-container {
         margin-right: 0.8rem;
       }
     }
+  }
+  #cursor-dot {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 9999;
+    top: 0;
+    left: 0;
   }
 }
 </style>
